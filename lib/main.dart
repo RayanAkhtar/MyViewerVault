@@ -4,6 +4,7 @@ import 'pages/blog.dart';
 import 'pages/recommend.dart';
 import 'pages/search.dart';
 import 'pages/my_list.dart';
+import 'pages/loading.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +16,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: const MyHomePage(title: 'ViewerVault'),
+      title: 'ViewerVault',
+      theme: ThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.grey[900],
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey[400],
+          elevation: 8,
+        ),
+        dividerColor: Colors.grey[800],
+      ),
+      // initial route is loading page
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoadingPage(), // Initial route
+        '/home': (context) => const MyHomePage(title: 'ViewerVault'),
+      },
     );
   }
 }
