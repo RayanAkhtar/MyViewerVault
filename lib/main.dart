@@ -5,8 +5,15 @@ import 'pages/recommend.dart';
 import 'pages/search.dart';
 import 'pages/my_list.dart';
 import 'pages/loading.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+
+void main() async {
+  try {
+    await dotenv.load();
+  } catch (e) {
+    print("Error loading .env file: $e");
+  }
   runApp(const MyApp());
 }
 

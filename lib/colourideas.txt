@@ -1,0 +1,15 @@
+
+Colour ideas:
+
+
+Pallet 1: Blueish
+    001011 - Black
+    093A3E - Dark Teal
+    3AAFB9 - Lighter Teal
+    64E9EE - Light Blue
+    97C8EB - Light Grey-Blue
+
+AppName: ViewerVault
+Slogan: Track, Rate, and Discover (Your Favourites)
+
+
